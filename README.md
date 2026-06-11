@@ -23,7 +23,9 @@ it deploys as static files as-is.
 - **Real form wiring** — point the estimate form at a form backend or email service,
   and remove the stub handler in `main.js`.
 - **License number** — replace the visible `[HI License #]` placeholder in the footer.
-- **Job photos** — drop Bryan's photos into the three labeled `[BRYAN'S JOB PHOTO]` frames.
+
+The three frames in the jobs section use real First Class job photos (metal, shingle, tile)
+pulled from the company's existing site — swap in Bryan's preferred shots in `assets/` anytime.
 
 ## Verified
 

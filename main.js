@@ -24,10 +24,15 @@
 
   /* hero load sequence */
   gsap.timeline({ defaults: { ease: 'power3.out', duration: 0.7 } })
-    .from('.hero .eyebrow', { y: 24, autoAlpha: 0 })
+    .from('.hero-photo', { autoAlpha: 0, x: 80, duration: 1.1 }, 0)
+    .from('.hero .eyebrow', { y: 24, autoAlpha: 0 }, 0.1)
     .from('.hero h1 .line', { y: 44, autoAlpha: 0, stagger: 0.12 }, '-=0.45')
     .from('.hero-sub', { y: 24, autoAlpha: 0 }, '-=0.45')
-    .from('.hero-ctas > *', { y: 18, autoAlpha: 0, stagger: 0.08 }, '-=0.45');
+    .from('.hero-ctas > *', { y: 18, autoAlpha: 0, stagger: 0.08 }, '-=0.45')
+    .from('.marquee', { autoAlpha: 0 }, '-=0.3');
+
+  /* services marquee — slow, endless */
+  gsap.to('.marquee-track', { xPercent: -50, duration: 38, ease: 'none', repeat: -1 });
 
   /* quiet, fast section reveals */
   gsap.utils.toArray('[data-reveal]').forEach(function (el) {
